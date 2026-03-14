@@ -1,0 +1,37 @@
+[core]
+  editor = code --wait
+  pager = delta
+
+# Use ssh with github instead of https
+# see: https://www.kernel.org/pub/software/scm/git/docs/git-config.html#:~:text=url.%3Cbase%3E.insteadOf
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
+
+[init]
+  defaultBranch = main
+
+# Create a branch on remote when pushing from local branch
+# see: https://www.kernel.org/pub/software/scm/git/docs/git-config.html#:~:text=url.%3Cbase%3E.insteadOf
+[push]
+  autoSetupRemote = true
+
+[merge]
+  conflictStyle = zdiff3
+
+[alias]
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true # use n and N to move between diff sections
+  dark = true # or light = true, or omit for auto-detection
+  hyperlinks = true
+  syntax-theme = base16
+
+# For indepent personal and professional configs place
+# machine specific configuration into a local file.
+# note: this line must come last for local file to take precedence
+[include]
+  path = ~/.gitconfig.local
