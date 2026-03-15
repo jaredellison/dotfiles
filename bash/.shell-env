@@ -1,0 +1,43 @@
+# vim: ft=sh :
+
+# PATH
+
+function prepend_path() {
+  # Does the alias only if the aliased program is installed
+    if [ -d $1 ]; then
+        export PATH="$1:$PATH"
+    fi
+}
+
+function append_path() {
+  # Does the alias only if the aliased program is installed
+    if [ -d $1 ]; then
+        export PATH="$PATH:$1"
+    fi
+}
+
+############################################################################
+
+prepend_path "/usr/local/bin"
+prepend_path "/opt/homebrew/bin"
+prepend_path "$HOME/.cargo/bin"
+
+# Add arm-none-eabi-gcc and other embedded cross compilation tools to path
+prepend_path "Applications/ARM/bin"
+
+eval "$(/opt/homebrew/bin/mise activate bash)"
+export MISE_GO_SET_GOROOT=true
+export MISE_GO_SET_GOPATH=true
+
+# Use sqlite from homebrew instead of system sqlite
+prepend_path "/opt/homebrew/opt/sqlite3/bin"
+
+# Set SQLite history file
+export SQLITE_HISTORY="$HOME/.sqlite_history"
+
+# Add llvm tools to path including clang-tidy for c development
+prepend_path "/opt/homebrew/opt/llvm/bin"
+
+# Add add pyenv to path
+prepend_path "$HOME/.pyenv/bin/"
+eval "$(pyenv init - bash)"
