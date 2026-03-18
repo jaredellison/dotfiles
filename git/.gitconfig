@@ -1,6 +1,7 @@
 [core]
   editor = code --wait
   pager = delta
+  excludesfile = ~/.gitignore_global
 
 # Use ssh with github instead of https
 # see: https://www.kernel.org/pub/software/scm/git/docs/git-config.html#:~:text=url.%3Cbase%3E.insteadOf
