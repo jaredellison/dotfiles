@@ -9,6 +9,9 @@ set bell-style none
 ## Shortened prompt only shows user and last two directories
 PS1='\[\033[01;32m\]\u:\[\033[01;34m\]${PWD#"${PWD%/*/*}/"} \[\033[00m\]\\$ '
 
+## Use vim mode
+set -o vi
+
 # Shell History
 ## don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
