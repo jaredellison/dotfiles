@@ -143,6 +143,7 @@ nnoremap <leader>b :Buffers<CR>
 
 " NERDTree file explorer
 nnoremap <leader>n :NERDTreeFocus<CR>
+let NERDTreeShowHidden=1 " Show hidden files by default
 
 " Move lines up/down with option
 " nnoremap <A-k> :m .-2<CR>==
