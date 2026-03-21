@@ -8,6 +8,7 @@ Plug 'joom/vim-commentary'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 call plug#end()
 
@@ -89,7 +90,13 @@ nnoremap <C-Down> :resize -2<CR>
 nnoremap <C-Left> :vertical resize -2<CR>
 nnoremap <C-Right> :vertical resize +2<CR>
 
-" Buffer navigation
+" Resize windows within a terminal
+tnoremap <C-Up> <C-\><C-n>:resize +2<CR>a
+tnoremap <C-Down> <C-\><C-n>:resize -2<CR>a
+tnoremap <C-Left> <C-\><C-n>:vertical resize -2<CR>a
+tnoremap <C-Right> <C-\><C-n>:vertical resize +2<CR>a
+
+"Buffer navigation
 nnoremap <leader>n :bnext<CR>
 nnoremap <leader>p :bprevious<CR>
 nnoremap <leader>d :bdelete<CR>
@@ -142,7 +149,7 @@ nnoremap <leader>g :Rg<CR>
 nnoremap <leader>b :Buffers<CR>
 
 " NERDTree file explorer
-nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <leader>m :NERDTreeFocus<CR>
 let NERDTreeShowHidden=1 " Show hidden files by default
 
 " Move lines up/down with option
@@ -182,3 +189,32 @@ function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+" Toggle bottom terminal
+let g:term_buf = 0
+let g:term_win = 0
+
+function! TermToggle(height)
+    if win_gotoid(g:term_win)
+        hide
+    else
+        botright new
+        exec "resize " . a:height
+        try
+            exec "buffer " . g:term_buf
+        catch
+            call termopen($SHELL, {"detach": 0})
+            let g:term_buf = bufnr("")
+            set nonumber
+            set norelativenumber
+            set signcolumn=no
+        endtry
+        startinsert!
+        let g:term_win = win_getid()
+    endif
+endfunction
+
+" Map to Ctrl+J
+nnoremap <C-j> :call TermToggle(12)<CR>
+inoremap <C-j> <Esc>:call TermToggle(12)<CR>
+tnoremap <C-j> <C-\><C-n>:call TermToggle(12)<CR>
