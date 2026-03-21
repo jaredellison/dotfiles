@@ -110,8 +110,8 @@ nnoremap <leader>[ :tabprevious<CR>
 nnoremap <leader>e :Explore<CR>
 
 " Quick edit vimrc
-nnoremap <leader>ev :vsplit $MYVIMRC<CR>
-nnoremap <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>ev :vsplit ~/.vimrc<CR>
+nnoremap <leader>sv :source ~/.vimrc<CR>
 
 " Web development specific mappings
 " HTML tag completion
