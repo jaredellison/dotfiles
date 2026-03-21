@@ -11,6 +11,9 @@ PS1='\[\033[01;32m\]\u:\[\033[01;34m\]${PWD#"${PWD%/*/*}/"} \[\033[00m\]\\$ '
 
 ## Use vim mode
 set -o vi
+  
+## Allow Ctrl+L to clear terminal
+bind '"\C-l": clear-screen'
 
 # Shell History
 ## don't put duplicate lines or lines starting with space in the history.
