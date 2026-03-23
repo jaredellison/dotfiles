@@ -9,6 +9,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
@@ -136,6 +137,13 @@ set statusline+=%=        " Right-align the rest
 set statusline+=%y        " File type
 set statusline+=\ %l,%c   " Line and column
 set statusline+=\ %P      " Percentage through file
+" test
+
+" Lightline Config
+let g:lightline = {
+  \ 'colorscheme': 'oceanicnext',
+  \ 'separator':    { 'left': "\ue0b4", 'right': "\ue0b6" },
+  \ }
 
 " Netrw (built-in file explorer) settings
 let g:netrw_banner=0       " Disable banner
