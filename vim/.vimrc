@@ -223,6 +223,6 @@ function! TermToggle(height)
 endfunction
 
 " Map to Ctrl+J
-nnoremap <C-j> :call TermToggle(12)<CR>
-inoremap <C-j> <Esc>:call TermToggle(12)<CR>
-tnoremap <C-j> <C-\><C-n>:call TermToggle(12)<CR>
+nnoremap <leader>j :call TermToggle(12)<CR>
+inoremap <leader>j <Esc>:call TermToggle(12)<CR>
+tnoremap <leader>j <C-\><C-n>:call TermToggle(12)<CR>
