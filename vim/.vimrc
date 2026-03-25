@@ -10,6 +10,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'itchyny/lightline.vim'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
@@ -222,7 +223,13 @@ function! TermToggle(height)
     endif
 endfunction
 
-" Map to Ctrl+J
+" Map to Leader + J
 nnoremap <leader>j :call TermToggle(12)<CR>
 inoremap <leader>j <Esc>:call TermToggle(12)<CR>
 tnoremap <leader>j <C-\><C-n>:call TermToggle(12)<CR>
+
+" Startify Config
+let g:startify_custom_header = ''
+let g:startify_change_to_vcs_root = 1
+
+
