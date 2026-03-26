@@ -8,7 +8,8 @@ Plug 'joom/vim-commentary'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+" TODO: Resolve conflict with window resizing commands
+" Plug 'mg979/vim-visualvmulti', {'branch': 'master'} 
 Plug 'itchyny/lightline.vim'
 Plug 'mhinz/vim-startify'
 
