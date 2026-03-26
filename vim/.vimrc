@@ -12,6 +12,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'mg979/vim-visualvmulti', {'branch': 'master'} 
 Plug 'itchyny/lightline.vim'
 Plug 'mhinz/vim-startify'
+Plug 'psliwka/vim-smoothie'
 
 call plug#end()
 
