@@ -119,13 +119,20 @@
       "Text": "0x1c",
       "Action": 11
     },
-    "0xf700-0x280000": {
-      "Text": "0x1b 0x1b 0x5b 0x41",
-      "Action": 11
+    "0x6b-0x100000-0x28": {
+      "Version": 2,
+      "Apply Mode": 0,
+      "Action": 13,
+      "Text": "",
+      "Escaping": 2
     },
     "0xf702-0x2a0000": {
       "Text": "1",
       "Action": 47
+    },
+    "0xf700-0x280000": {
+      "Text": "0x1b 0x1b 0x5b 0x41",
+      "Action": 11
     },
     "0x2d-0x40000": {
       "Text": "0x1f",
