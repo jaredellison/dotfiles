@@ -14,6 +14,12 @@ Plug 'itchyny/lightline.vim'
 Plug 'mhinz/vim-startify'
 Plug 'psliwka/vim-smoothie'
 
+" Git
+Plug 'airblade/vim-gitgutter' 
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
+Plug 'ruanyl/vim-gh-line'
+
 call plug#end()
 
 " Basic Settings
