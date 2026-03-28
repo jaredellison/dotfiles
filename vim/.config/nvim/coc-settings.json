@@ -1,0 +1,11 @@
+{
+  "coc.preferences.formatOnSave": true,
+  "eslint.autoFixOnSave": true,
+  "prettier.requireConfig": false,
+  "typescript.preferences.includePackageJsonAutoImports": "auto",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "go.goplsPath": "gopls"
+}
+
