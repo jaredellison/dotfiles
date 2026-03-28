@@ -240,4 +240,14 @@ tnoremap <leader>j <C-\><C-n>:call TermToggle(12)<CR>
 let g:startify_custom_header = ''
 let g:startify_change_to_vcs_root = 1
 
+" Support JSX Comments
+function! JsxCommentString()
+  let l:syn = synIDattr(synID(line('.'), col('.'), 1), 'name')
+  if l:syn =~? 'jsx\|tsx'
+    setlocal commentstring={/*\ %s\ */}
+  else
+    setlocal commentstring=//\ %s
+  endif
+endfunction
 
+autocmd CursorMoved,CursorMovedI *.jsx,*.tsx,*.js,*.ts call JsxCommentString()
