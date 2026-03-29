@@ -19,6 +19,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'ruanyl/vim-gh-line'
+Plug 'xuyuanp/nerdtree-git-plugin'
 
 call plug#end()
 
