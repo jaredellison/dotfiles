@@ -169,6 +169,11 @@ nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>m :NERDTreeFocus<CR>
 let NERDTreeShowHidden=1 " Show hidden files by default
 
+" Git (fugitive)
+nnoremap <leader>gs :G<CR>               " git status
+nnoremap <leader>gc :G commit -m ""<Left>
+nnoremap <leader>gh :GV<CR>              " git log (gv.vim)
+
 " Move lines up/down with option
 " nnoremap <A-k> :m .-2<CR>==
 " nnoremap <A-j> :m .+1<CR>==
