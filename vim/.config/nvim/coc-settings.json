@@ -6,6 +6,9 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "go.goplsPath": "gopls"
+  "go.goplsPath": "gopls",
+  // Enable typescript auto imports
+  "tsserver.implicitProjectConfig.checkJs": true,
+  "typescript.preferences.importModuleSpecifier": "shortest",
+  "suggest.autoTrigger": "always"
 }
-
