@@ -41,13 +41,14 @@ if [ -f ~/.shell-env  ]; then
     source ~/.shell-env
 fi
 
-if [ -f ~/.shell-env-local  ]; then
-    source ~/.shell-env-local
-fi
-
 # Alias definitions
 if [ -f ~/.shell-aliases ]; then
   source ~/.shell-aliases
+fi
+
+# Apply local env and alias overrides
+if [ -f ~/.shell-env-local  ]; then
+    source ~/.shell-env-local
 fi
 
 if [ -f ~/.shell-aliases-local ]; then
