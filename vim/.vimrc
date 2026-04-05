@@ -101,6 +101,10 @@ tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
 
+" Unmap NERDTree's C-j and C-k to preserve window navigation
+autocmd FileType nerdtree noremap <buffer> <C-j> <C-w>j
+autocmd FileType nerdtree noremap <buffer> <C-k> <C-w>k
+
 " Resize windows
 nnoremap <C-Up> :resize +2<CR>
 nnoremap <C-Down> :resize -2<CR>
