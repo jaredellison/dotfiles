@@ -195,6 +195,18 @@ xnoremap <A-j> :m'>+<CR>gv=gv
 nnoremap <A-k>  :<C-u>m-2<CR>==
 nnoremap <A-j>  :<C-u>m+<CR>==
 
+" CoC Setup
+" Auto-install CoC extensions
+if isdirectory($HOME . "/.vim/plugged/coc.nvim")
+  let g:coc_global_extensions = [
+    \ 'coc-tsserver',
+    \ 'coc-prettier',
+    \ 'coc-go',
+    \ 'coc-eslint',
+    \ 'coc-json',
+    \ ]
+endif
+
 " CoC suggestions
 " Use tab for trigger completion with characters ahead and navigate
 " NOTE: There's always complete item selected by default, you may want to enable
