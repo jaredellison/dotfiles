@@ -1,0 +1,19 @@
+{
+  "Check Errors": {
+    "prefix": "errchk",
+    "body": ["if err != nil {", "\t$1", "}"],
+    "description": "check errors"
+  },
+  "PrintLn Current Selection": {
+    "prefix": "fmtw",
+    "body": ["fmt.Println(\"${CLIPBOARD}:\", ${CLIPBOARD})"]
+  },
+  "PrintLn String": {
+    "prefix": "fmts",
+    "body": ["fmt.Println(\"$1\")"]
+  },
+  "PrintLn Struct": {
+    "prefix": "fmtstr",
+    "body": ["fmt.Printf(\"${CLIPBOARD}: %+v\\n\", ${CLIPBOARD})"]
+  }
+}
