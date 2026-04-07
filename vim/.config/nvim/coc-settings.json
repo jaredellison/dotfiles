@@ -10,5 +10,7 @@
   // Enable typescript auto imports
   "tsserver.implicitProjectConfig.checkJs": true,
   "typescript.preferences.importModuleSpecifier": "shortest",
-  "suggest.autoTrigger": "always"
+  "suggest.autoTrigger": "always",
+  "snippets.ultisnips.pythonPrompt": false,
+  "snippets.textmateSnippetsRoots": ["~/.vim/snippets"]
 }

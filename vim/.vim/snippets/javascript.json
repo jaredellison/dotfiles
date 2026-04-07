@@ -1,0 +1,16 @@
+{
+  "arrow function": {
+    "prefix": "arrow",
+    "body": ["($1) => {$2}"]
+  },
+
+  "console log current selection": {
+    "prefix": "clw",
+    "body": ["console.log('${CLIPBOARD}:', ${CLIPBOARD});"]
+  },
+
+  "console log string": {
+    "prefix": "cls",
+    "body": ["console.log('$1');"]
+  }
+}

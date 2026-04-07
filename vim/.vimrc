@@ -204,6 +204,7 @@ if isdirectory($HOME . "/.vim/plugged/coc.nvim")
     \ 'coc-go',
     \ 'coc-eslint',
     \ 'coc-json',
+    \ 'coc-snippets',
     \ ]
 endif
 
